@@ -1,0 +1,911 @@
+
+
+body {
+    margin: 0 auto;
+    color:#420303;
+    background-color: #fef7ef;
+    font-family: 'Noto Serif JP', serif;
+}
+img {
+    max-width: 100%;
+  } 
+
+h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 50px auto;
+}
+h2 span {
+    font-size: 15px; 
+}
+h2 span::after{
+    content: url(../images/logoFIT/border.jpg) ;
+    position: absolute;
+    top: 70px;
+    left: 25px;
+}
+a:hover {
+    opacity: 0.8;
+}
+
+/* ｈｅａｄｅｒ　エリア */
+.headerWrap {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0 50px 0;
+}
+.headerWrap ul img {
+    width: 50px;
+}
+.headerWrap h1 img{
+    margin-right: 500px;
+    width: 150px;
+    height: 150px;
+}
+.humberger {/* 追加 */
+    display: none;
+  }
+.headerWrap ul {
+    display: flex;
+    justify-content: space-between;
+}
+.headerWrap ul li{
+    margin-right: 15px;
+    text-align: center;
+}
+/* 一定の距離以降ｎａｖばーはページの上に固定スタイル */
+.header-fix {
+    width: 100%;
+    height: 50px;
+    background-color: #fef7ef;
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9;
+}
+.header-fix nav{
+    position: absolute;
+    left: 121px;
+    top: 0;
+}
+.header-fix nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-fix nav ul li {
+    width: 180px;
+    text-align: center;
+    border-left: 1px dashed gray;
+    border-right: 1px dashed gray;
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+/* 右上のネットショップとA&Qのスタイル */
+.fixTop{
+    height: 50px;
+    position: fixed;
+    top: 0;
+    right: 125px;
+    z-index: 99;
+}
+.fixTop a{
+    background-color: #ffecd4;
+    margin-right: 5px;
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    color: #420303;
+    font-weight: 700;
+    border-radius: 2px; 
+}
+.fixTop a:hover{
+    background-color: #420303;
+    color: #fff1e0;
+    transition: all 500ms ease-in-out 100ms;
+}
+
+
+/* トップ navエリア */
+.mainNav nav {
+    height: 100%;
+    height: 100px;
+}
+.mainNav nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mainNav nav ul li {
+    width: 180px;
+    text-align: center;
+    border-left: 1px dashed gray;
+    border-right: 1px dashed gray;
+    padding-top: 10px;
+    font-weight: bold;
+}
+nav ul li span {
+    color: #01AEBC;
+    font-size: 11px;
+}
+nav ul li a{
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+}
+nav ul li a:hover {
+    opacity: 1;
+}
+nav ul li a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #420303;
+    transform: translate(-100%, 0);
+    transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s;
+  content: "";
+}
+nav ul li a:hover:after {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+
+/* スライドショー　エリア */   
+main {
+    width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+} 
+.sliderWrap{
+    width: 900px;
+    margin: 0 auto 50px;
+}
+
+.slide-banner{
+    width:900px;
+    position: relative;
+}
+.slide-banner img {
+    width: 900px;
+    height: 500px;
+}
+.prev{
+    width: 22px;
+    height: 30px;
+    background-color: gray;
+    background: url(../images/sliderImages/sprite.jpg) no-repeat left bottom;
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    border-radius: 100px;
+}
+.next{
+    width: 22px;
+    height: 30px;
+    background-color: gray;
+    background: url(../images/sliderImages/sprite.jpg) no-repeat right top;
+    position: absolute;
+    right: -30px;
+    top: 50%;
+    border-radius: 18px;
+}
+.banner-btn{
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    display: flex;
+}
+.banner-btn li{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 4px;
+    border: 1px solid rgba(0, 0, 0, .15);
+    background-color: rgba(66, 3, 3, .8);
+}
+.banner-btn .btn-active{
+    width: 9px;
+    height: 9px;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, .1);
+}
+
+/* ｉｔｅｍＬｉｓｔ　エリア */
+.itemList {
+    text-align: center;
+    position: relative;
+    
+}
+.itemList ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.itemList ul li .itemZoom {
+    width: 400px;
+    overflow: hidden;
+}
+.itemList ul li img{
+    width: 400px;
+}
+.itemList ul img:hover {
+    transform: scale(1.2, 1.2);
+    transition: 1s all;
+}
+.itemList ul li a span {
+    display: inline-block;
+    margin: 30px auto;
+    border-bottom: 2px groove #420303;
+}
+.itemList ul li a:hover{
+    opacity: 1;
+}
+
+/* video エリア */
+.video {
+    margin: 50px auto;
+    text-align: center;
+    position: relative;
+}
+.video p {
+    margin: 20px auto;
+}
+.video a:hover {
+    color: aqua;
+}
+/* お知らせ　エリア */
+.notice {
+    position: relative;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.notice .noticeWrap {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+}
+.open {
+    border: 1px solid #420303;
+    width: 500px;
+    height: 300px;
+    line-height: 1.8;
+    font-size: 20px;
+    padding-top: 100px;
+    color: #420303;
+    background: url(../images/cakeImages/4.jpg) no-repeat center center/ cover;
+}
+.open span{
+    font-size: 30px;
+    color: rgb(154, 10, 10);
+}
+.message {
+    padding-top: 70px;
+}
+.message h3 {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+.message dl {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    border-bottom: 3px dashed #420303;
+    width: 450px;
+}
+.message dt {
+    width: 150px;
+    text-align: left;
+}
+.message a {
+    width: 300px;
+    text-align: left;
+    margin-left: 50px;
+}
+/* ｈｏｍｅエリア左のエリアにスクロールすると　右の表示 */
+main .home {
+    position: relative;
+}
+main .home .elevator {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    margin-left: 515px;
+}
+main .home .elevator>a {
+    width: 70px;
+    height: 70px;
+    background-color: #420303;
+    color: #fff;
+    display: block;
+    line-height: 70px;
+    text-align: center;
+}
+main .home .elevator-fix {
+    position: fixed;
+    top: 100px;
+}
+main .home .elevator>.active{
+    color: red;
+    /* background-color: rgb(126, 175, 175); */
+}
+
+
+/* ｔｈａｎｋｓエリア */
+.thanks {
+    border: 1px solid #420303;
+    margin: 30px auto;
+    width: 900px;
+    height: 450px;
+    color: #420303;
+    padding: 100px 0 0 200px;
+    background: url(../images/cakeImages/cakehouse1.jpg) no-repeat center center/ cover;
+}
+.thanks p span:first-child{
+    font-size: 50px;
+}
+.thanks p span:last-child {
+    font-size: 29px;
+    display: inline-block;
+    margin: 20px 0 50px 0;
+}
+.thanks:last-child {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/* footer エリア */
+footer {
+    width: 100%;
+    height: 300px;
+    background-color: #41362E;
+    text-align: center;
+    padding-top: 50px;
+    position: relative;
+}
+footer nav ul {
+    display: flex;
+}
+footer nav ul li {
+    width: 180px;
+    text-align: center;
+    border-left: 1px dashed gray;
+    border-right: 1px dashed gray;
+    padding-top: 10px;
+    font-weight: bold;
+}
+.topPage{
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    display: none;
+}
+.footerWrap {
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+/* トップページ修了 */
+
+/* concept ページ　開始 */
+.concept main {
+    text-align: center;
+}
+.concept main .store {
+    position: relative;
+}
+.concept main img {
+    width: 95%;
+    height: 500px;
+}
+.concept main h2 {
+    margin-top: 50px;
+}
+.concept main .textwidget {
+    font-size: 24px;
+    line-height: 2.5;
+    margin: 30px auto;
+    background-color: #fff;
+}
+/* concept ページ　終了*/
+
+/* access ページ　開始 */
+.access main {
+    position: relative;
+    text-align: center;
+}
+.access main h2 {
+    margin: 50px;
+}
+.access main ul{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+}
+.access main ul li img{
+    width: 450px;
+    height: 300px;
+}
+/* access ページ　終了*/
+
+/* contact ページ　開始 */
+.contact main {
+    text-align: center;
+    position: relative;
+    margin: 30px auto 30px;
+}
+.contact h2{
+    margin: 50px auto;
+}
+.contact .contactWrap {
+    width: 1000px;
+    display: flex;
+    margin: 0 auto;
+}
+.contact main .open {
+    width: 300px;
+    height: 665px;
+}
+.contact .contactWrap  .formBox {
+    width: 100%;
+}
+/* .contact table {
+    margin: 100px 0 100px 100px;
+} */
+.contact table {
+    margin-left: 10px;
+    color: #fff;
+}
+.contact table tr {
+    border-bottom: solid 2px white;
+}
+.contact table th {
+    width: 160px;
+    background-color:#420303;
+    padding-right: 20px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+.contact table th span {
+    color: red;
+}
+.contact table td {
+    width: 300px;
+    line-height: 50px;
+}
+.contact table td input {
+    -webkit-box-shadow: 0 0 5px #ccc;/*点击input 外阴影*/
+    -moz-box-shadow:0 0 5px #ccc;
+    box-shadow: 0 0 5px #ccc;
+    width: 500px;
+    height: 30px;
+    border: 1px solid #d8d8d8;
+    margin-left: 10px;
+    line-height: 30px;
+    text-align: left;
+    color: #420303;
+}
+.contact table td input:focus,
+.contact table .tel input:focus,
+.contact textarea:focus
+ {
+    border-color:#420303
+}
+.contact table .tel {
+    border: none;
+}
+.contact table .tel input{
+    -webkit-box-shadow: 0 0 5px #ccc;/*点击input 外阴影*/
+    -moz-box-shadow:0 0 5px #ccc;
+    box-shadow: 0 0 5px #ccc;
+    width: 140px;
+    height: 20px;
+    border: 1px solid #d8d8d8;
+    text-align: center;
+}
+.contact table .tel i {
+    color: black;
+    margin-left: 15px;
+}
+.contact textarea {
+    -webkit-box-shadow: 0 0 5px #ccc;/*点击input 外阴影*/
+    -moz-box-shadow:0 0 5px #ccc;
+    box-shadow: 0 0 5px #ccc;
+    width: 500px;
+    height: 100px;
+    border: 1px solid #d8d8d8;
+    margin-left: 10px;
+}
+.contact .sendMail {
+    width: 350px;
+    height: 50px;
+    background-color: #F6D6AE;
+    margin: 30px auto;
+}
+.contact .sendMail:hover {
+    background-color: #420303;
+    color: #fff;
+}
+/* contact ページ　終了*/
+
+/* menu　ページ　開始 */
+.menu main {
+    text-align: center;
+    position: relative;
+}
+.menu main .menuMain ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.menu main .menuMain ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.menu main .menuMain ul li {
+    margin: 50px 10px 20px 0;
+}
+.menu main .menuMain ul li .menuZoom {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
+.menu main .menuMain ul li .menuZoom a{
+    opacity: 1;
+}
+.menu main .menuMain ul li span {
+    width: 200px;
+    height: 200px;
+    height: 50px;
+    background-color: #420303;
+    display: inline-block;
+    color: #fff;
+    line-height: 50px;
+    /* margin-top: -50px; */
+}
+.menu main .menuMain ul li img{
+    width: 200px;
+    height: 200px;
+}
+.menu main .menuMain ul li img:hover{
+   transform: scale(1.2, 1.2);
+   transition: 1s all;
+}
+/* menu　ページ　終了 */
+
+/* Q&Aページのデザイン */
+.faq-p {
+    display: inline-block;
+    margin: 0 0 50px;
+    border-bottom: 2px solid #0066FF;
+    font-size: 105%;
+  }
+  
+  .faq-list {
+    width: 960px;
+    margin: 30px auto;
+    text-align: left;
+  }
+  
+  .faq-list dt {
+    padding: 0 20px 5px 2em;
+    margin: 0 0 10px;
+    border-bottom: 1px dotted #000000;
+    position: relative;
+    line-height: 1.2;
+  }
+  
+  .faq-list dt::before {
+    content: "Q：";
+    color: #01AEBC;
+    font-weight: bold;
+    position: absolute;
+    top:0;
+    left: 0;
+  }
+  
+  .faq-list dt::after {
+    content: "▼";
+    color: #01AEBC;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  
+  .faq-list dd {
+    padding: 0 0 0 2em;
+    margin: 0 0 50px;
+    position: relative;
+    line-height: 2;
+  }
+  .faq-list .p {
+    display: none;
+  }
+  
+  .faq-list dd::before {
+    content: "A：";
+    color: #EB4D64;
+    font-weight: bold;
+    position: absolute;
+    top:0;
+    left: 0;
+  }
+
+  /* モバイルスタイル */
+ 
+  @media screen and (max-width: 768px) {
+    /* ハンバーガボタン */
+    .humberger {
+        display: block;
+        background: url(../images/burger.svg) no-repeat;
+        width: 40px;
+        height: 30px;
+        position: absolute;
+        top: 20px;
+        right: 15px;
+      }
+    
+      .humberger-off {
+        background: url(../images/close.svg) no-repeat;
+        width: 35px;
+        height: 35px;
+      }
+    body{
+        width: 98%;
+    }
+    .zoom-out-down {
+        width: 98%;
+    }
+    .headerWrap {
+        width: 100%;
+    }
+    
+    .headerWrap h1 img{
+        margin-right: 10px;
+        width: 80px;
+        height: 80px;
+    }
+    .mainNav {
+        display: none;
+        height: 200px;
+    }
+    .mainNav{
+        margin-bottom: 100px;
+    }
+    .mainNav nav ul {
+        display: block;
+        width: 100%;
+        height: 500px;
+    }
+    .mainNav nav ul li{
+        margin: 0 auto;
+        width: 98%;
+        border: 1px solid #420303;
+        background-color: #ECECEC;
+        margin-bottom: -1px;
+    }
+    nav ul li a:after{
+        display: none;
+    }
+    .itemList {
+        text-align: center;
+    }
+    h2 span {
+        position: relative;
+    }
+    h2 span::after{
+        content: url(../images/logoFIT/border1.jpg);
+        position: absolute;
+        left: -150px;
+        top: 20px;
+       width: 98%;
+       margin: 0 auto;
+    }
+    main {
+        width: 100%;
+    }
+    .sliderWrap{
+        width: 98%;
+        
+    }
+    
+    .slide-banner{
+        width:100%;
+       
+        text-align: center;
+        margin: 0 auto;
+    }
+    .slide-banner img {
+        width: 100%;
+        height: 100%;
+    }
+    .prev{
+        /* left: -15px;
+        top: 50%; */
+        display: none;
+    }
+    .next{
+        /* right: -15px;
+        top: 50%; */
+        display: none;
+    }
+    .header-fix {
+        background-color: #ffecd4;
+    }
+   
+    .header-fix nav {
+        display: none;
+    }
+    .fixTop{
+        left: 25%;
+        z-index: 99;
+    }
+    main .home .elevator {
+        display: none;
+    }
+    iframe{
+        width: 98%;
+        height: auto;
+    }
+    .itemList ul img {
+        width: 98%;
+    }
+    .notice .noticeWrap {
+        display: block;
+    }
+    .open {
+        margin: 0 auto;
+        width: 98%;
+        height: 80%;
+    }
+    .message dl {
+        width: 98%;
+        display: block;
+    }
+    .thanks {
+        width: 98%;
+        height: 200px;
+        padding: 80px 0 0 70px;
+    }
+    .thanks p span:first-child{
+        font-size: 20px;
+    }
+    .thanks p span:last-child {
+        font-size: 10px;
+        display: inline-block;
+        margin: 5px 0 10px 0;
+    }
+    .thanks:last-child {
+        font-size: 5px;
+        font-weight: bold;
+    }
+    footer {
+        text-align: center;
+        height: 350px;
+        display: block;
+    }
+    footer nav ul {
+        display: block;
+    }
+    footer h1 img {
+        width: 100px;
+        height: 100px;
+    }
+    footer img{
+        width: 50px;
+        height: 50px;
+        margin: 10px auto;
+    }
+    footer .footerWrap {
+        margin-bottom: 30px;
+    }
+    /* トップページ終わり */
+
+    /* conceptページ 開始*/
+    .concept main {
+        margin-top: 50px;
+    }
+    .concept main img {
+        width: 95%;
+        height: 250px;
+    }
+    .concept main .textwidget {
+        font-size: 13px;
+        line-height: 2;
+    }
+    /* conceptページ 修了*/
+
+    /* ａｃｃｅｓｓページ開始 */
+    .access main {
+        margin-top: 50px;
+    }
+    .access main ul{
+        display: block;
+        margin-bottom: 10px;
+    }
+    .access main ul li img{
+        width: 98%;
+        height: 200px;
+    }
+    .access iframe {
+        width: 98%;
+        height: 300px;
+    }
+    /* ａｃｃｅｓｓページ修了 */
+    /* menuページ開始 */
+    .menu main {
+        margin-top: 50px;
+    }
+    .menu main .menuMain ul li img{
+        width: 100%;
+    }
+    .menu main .menuMain ul li span {
+        width: 98%;
+    }
+    /* menuページ修了 */
+
+    /* contactページ開始 */
+    .contact table {
+        margin-left: 0;
+        width: 100%;
+    }
+    .contact .contactWrap {
+        display: block;
+        width: 100%;
+    }
+    .contact main .open {
+        width: 100%;
+        height: 350px;
+    }
+    .contact table th {
+        width: 140px;
+    }
+    
+    .contact table td {
+        width: 210px;
+        line-height: 50px;
+    }
+    .contact table td input {
+        width: 210px;
+    }
+ 
+    .contact table .tel input{
+        width: 51px;
+        height: 20px;
+       
+    }
+    .contact table .tel i {
+        margin-left: 8px;
+    }
+    .contact textarea {
+        width: 90%;
+    }
+    /* contactページ修了 */
+
+    /* questionページ開始 */
+    .faq-list {
+        width: 98%;
+        
+      }
+    /* questionページ修了 */
+
+    
+}
+
+
+
+
+
